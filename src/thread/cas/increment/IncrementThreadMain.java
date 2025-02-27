@@ -10,9 +10,10 @@ public class IncrementThreadMain {
     public static final int THREAD_COUNT = 1000;
 
     public static void main(String[] args) throws InterruptedException {
-//        test(new BasicInteger());
-//        test(new VolatileInteger());
+        test(new BasicInteger());
+        test(new VolatileInteger());
         test(new SyncInteger());
+        test(new MyAtomicInteger());
     }
 
     private static void test(IncrementInteger incrementInteger) throws InterruptedException {
