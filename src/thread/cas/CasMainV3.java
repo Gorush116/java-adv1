@@ -18,7 +18,7 @@ public class CasMainV3 {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                incrementAndget(atomicInteger);
+                incrementAndGet(atomicInteger);
             }
         };
 
@@ -38,7 +38,7 @@ public class CasMainV3 {
 
     }
 
-    private static int incrementAndget(AtomicInteger atomicInteger) { 
+    private static int incrementAndGet(AtomicInteger atomicInteger) {
         int getValue;
         boolean result;
         do {
@@ -49,6 +49,6 @@ public class CasMainV3 {
             log("result = " + result);
         } while (!result);
 
-        return getValue + 1 ;
+        return getValue + 1 ; // 호출한 시점의 값에서 1을 더해서 return 해주기 위함
     }
 }
