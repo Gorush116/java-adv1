@@ -1,4 +1,4 @@
-package thread.collection.simple.list;
+package thread.collection.simple;
 
 import java.util.ArrayList;
 import java.util.List;
