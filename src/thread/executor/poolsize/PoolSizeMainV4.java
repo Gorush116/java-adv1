@@ -22,7 +22,7 @@ public class PoolSizeMainV4 {
 
         long startMs = System.currentTimeMillis();
         for (int i = 1; i <= TASK_SIZE; i++) {
-            String taskName = "task" + i;
+            String taskName = "task" + i; // 하나의 요청에서는 별도의 스레드가 분리
             try {
                 es.execute(new RunnableTask(taskName));
                 printState(es);
